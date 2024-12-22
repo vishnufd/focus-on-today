@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3faed;
+    font-family: 'Poppins',sans-serif;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+h1 {
+    margin: 1.3rem 0;
+    font-size: 38px;
+    color: #49a300;
+    text-align: center;
+}
+.span-h1 {
+    color: #61481c;
+}
+
+/* Main section */
+.main-section {
+    max-width: 530px;
+    background-color: #FBFBFB;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+.heading-section {
+    display: flex;
+}
+div > .sun-animation {
+    margin-left: 1rem;
+}
+.face-img {
+    position: relative;
+    top: 1px;
+    left: -24px;
+}
+.progress-label,.error-label{
+    color: #858585;
+    margin-top: 2.2rem;
+    font-size: 15px;
+}
+.progress-bar {
+    height: 25px;
+    background-color: #f3faed;
+    margin-top: 1rem;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 3rem;
+}
+.progress-value {
+    height: 25px;
+    background-color: #49a300;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    overflow: hidden;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+.progress-no{
+    display: block;
+    margin-left: 25px;
+    margin-top: 4px;
+}
+
+.error-label {
+    color: #FF5151;
+    margin-top: 1rem;
+    position: absolute;
+    top: 27px;
+    display: none;
+}
+.show-error .error-label {
+    display: block;
+}
+.goal-container{
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 17px;
+    margin-top: 0.5rem;
+    display: flex;
+}
+.check-box {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #61481C4D;
+    margin-block: auto;
+    margin-left: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.1rem;
+    padding-left: 0.1rem;
+}
+.goal-one {
+    margin-left: 1rem;
+    width: 80%;
+    border: none;
+    border-radius: 17px;
+    font-size: 18px;
+    outline: none;
+}
+.goal-one::placeholder {
+    color: #c0c0c0;
+}
+.space {
+    margin-top: 1rem;
+}
+.mini-footer {
+    text-align: center;
+    margin-block: 2rem;
+    font-size: 15px;
+}
+.made-by {
+    text-align: center;
+    font-size: 12px;
+}
+@media (max-width: 395px) {
+    .progress-label{
+        font-size: 13px;
+    }
+    .goal-one {
+        margin-right: 0.8rem;
+    }
+    .check-box {
+        width: 16px;
+        height: 16px;
+    }
+    .goal-one {
+        font-size: 14px;
+    }
+    .error-label{
+        font-size: 13px;
+    }
+    .progress-value {
+        font-size: 10px;
+        padding-top: 6px;
+    }
+}
+
+/* sun animation */
+.sun-animation {
+    animation-name: rotate;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+/* checkbox */
+.completed .check-box {
+    background: #49a300;
+    border-color: #49a300;
+}
+.check-icon {
+    display: none;
+}
+.completed .check-icon {
+    display: block;
+}
+.completed .goal-one {
+    color: #49a300;
+    text-decoration: line-through;
+}
